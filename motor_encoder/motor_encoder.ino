@@ -12,19 +12,35 @@ void setup() {
   myservo1.attach(PIN_SERVO1);   //定义舵机接口 10                                                                         
   myservo2.attach(PIN_SERVO2);   //定义舵机接口 10   
   myservo3.attach(PIN_SERVO3);   //定义舵机接口 10   
+
+  int angle1, angle2, angle3; 
+angle2=40;     // 40度 平 顺时针
+myservo2.write(angle2); 
+angle1=100;
+myservo1.write(angle1); 
+angle3=180;    // 90度嵌入舵机座，角度变大，向上抬升
+myservo3.write(angle3);  
+delay(1000);
+  
+angle3=150;    // 90度嵌入舵机座，角度变大，向上抬升
+myservo3.write(angle3);   
+delay(800);
+angle1 = 0; //0~180  
+myservo1.write(angle1);  
+
+delay(800);
+angle3=180;    // 90度嵌入舵机座，角度变大，向上抬升
+myservo3.write(angle3); 
+
+delay(2000);
+angle1=100;
+myservo1.write(angle1); 
+
+
 }   
 void loop() {   
  // put your main code here, to run repeatedly:   
-int angle1, angle2, angle3;   
-  
 
-angle1 = 0; //0~180   
-angle2=40;     // 40度 平 顺时针
-angle3=180;    // 90度嵌入舵机座，角度变大，向上抬升
-myservo1.write(angle1);      
-myservo2.write(angle2);      
-myservo3.write(angle3);      
-  //设置舵机旋转角度   
  
 delay(100);   
 }  
